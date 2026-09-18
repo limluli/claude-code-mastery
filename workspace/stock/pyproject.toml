@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "stock-autotrader"
+version = "0.1.0"
+description = "Korean stock auto-trading system with KIS API"
+authors = ["limluli <limluli906@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "stock", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+websockets = "^12.0"
+pandas = "^2.1.0"
+numpy = "^1.24.0"
+pandas-ta = "^0.3.14b0"
+apscheduler = "^3.10.4"
+pydantic = "^2.5.0"
+pydantic-settings = "^2.1.0"
+python-dotenv = "^1.0.0"
+loguru = "^0.7.2"
+pytest = "^7.4.0"
+python-telegram-bot = "^20.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.1.0"
+black = "^23.12.0"
+ruff = "^0.1.8"
+pre-commit = "^3.5.0"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
